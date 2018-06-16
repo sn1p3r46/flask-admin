@@ -452,7 +452,12 @@
                 processLeafletWidget($el, name);
                 return true;
             case 'x-editable':
-                $el.editable({params: overrideXeditableParams});
+                $el.editable({
+                    params: overrideXeditableParams,
+                    combodate: {
+                        maxYear: 2030,
+                    }
+                });
                 return true;
             case 'x-editable-combodate':
                 $el.editable({
